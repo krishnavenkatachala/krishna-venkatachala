@@ -1,5 +1,4 @@
-# Krishna Venkatachala Portfolio Website
-
+# Krishna Venkatachala
 A modern, responsive personal portfolio website showcasing the professional profile, technical expertise, leadership experience, and enterprise software engineering journey of Krishna Venkatachala.
 
 ## Overview
