@@ -1,0 +1,757 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Krishna Venkatachala | Enterprise Solutions Architect</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0b1120;
+    color:#f8fafc;
+    line-height:1.7;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+header{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    background:
+        radial-gradient(circle at top right, rgba(56,189,248,0.15), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(99,102,241,0.12), transparent 35%),
+        #0b1120;
+}
+
+.hero{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+}
+
+.hero-text{
+    flex:1;
+    min-width:320px;
+}
+
+.hero-text h1{
+    font-size:4rem;
+    line-height:1.1;
+    margin-bottom:15px;
+}
+
+.hero-text h2{
+    color:#38bdf8;
+    font-size:1.5rem;
+    margin-bottom:25px;
+    font-weight:500;
+}
+
+.hero-text p{
+    color:#cbd5e1;
+    max-width:720px;
+    font-size:1.05rem;
+}
+
+.hero-card{
+    flex:0.9;
+    min-width:300px;
+    background:rgba(15,23,42,0.7);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.08);
+    padding:35px;
+    border-radius:24px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.35);
+}
+
+.hero-card h3{
+    margin-bottom:20px;
+    color:#38bdf8;
+}
+
+.tech-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.tech-tags span{
+    background:#111827;
+    border:1px solid rgba(255,255,255,0.08);
+    padding:10px 16px;
+    border-radius:30px;
+    color:#e2e8f0;
+    font-size:0.95rem;
+}
+
+.contact{
+    margin-top:30px;
+}
+
+.contact span{
+    display:inline-block;
+    margin-right:20px;
+    margin-bottom:10px;
+    color:#94a3b8;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 30px;
+    background:#38bdf8;
+    color:#020617;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:600;
+    transition:0.3s ease;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+section{
+    padding:80px 0;
+}
+
+.section-title{
+    font-size:2.5rem;
+    margin-bottom:45px;
+    color:#38bdf8;
+}
+
+.card{
+    background:#111827;
+    border:1px solid rgba(255,255,255,0.06);
+    padding:35px;
+    border-radius:22px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.skill-box{
+    background:#111827;
+    border:1px solid rgba(255,255,255,0.06);
+    padding:28px;
+    border-radius:18px;
+    transition:0.3s ease;
+}
+
+.skill-box:hover{
+    transform:translateY(-4px);
+}
+
+.skill-box h3{
+    margin-bottom:15px;
+    color:#f8fafc;
+}
+
+.skill-box p{
+    color:#cbd5e1;
+}
+
+.timeline{
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+}
+
+
+.timeline-item{
+    background:#111827;
+    border-left:5px solid #38bdf8;
+    padding:30px;
+    border-radius:14px;
+    margin-bottom:5px;
+}
+
+
+.timeline-item h3{
+    margin-bottom:8px;
+}
+
+.timeline-item span{
+    color:#38bdf8;
+    font-size:0.95rem;
+}
+
+.timeline-item p{
+    margin-top:12px;
+    color:#cbd5e1;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.stat{
+    background:#111827;
+    border-radius:18px;
+    padding:35px;
+    text-align:center;
+}
+
+.stat h2{
+    font-size:2.8rem;
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+footer{
+    padding:50px 0;
+    text-align:center;
+    background:#020617;
+    color:#94a3b8;
+}
+
+.highlight{
+    color:#38bdf8;
+}
+
+@media(max-width:768px){
+    .hero-text h1{
+        font-size:2.8rem;
+    }
+}
+
+/* ===== RESPONSIVE DESIGN IMPROVEMENTS ===== */
+
+html{
+    scroll-behavior:smooth;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.hero{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+}
+
+.hero-text,
+.hero-card{
+    flex:1 1 420px;
+}
+
+.hero-text h1{
+    font-size:clamp(2.4rem, 6vw, 4rem);
+    line-height:1.15;
+}
+
+.hero-text h2{
+    font-size:clamp(1.1rem, 3vw, 1.6rem);
+}
+
+.hero-text p{
+    font-size:clamp(0.95rem, 2vw, 1.05rem);
+}
+
+.section-title{
+    font-size:clamp(2rem, 5vw, 2.5rem);
+}
+
+.tech-tags{
+    gap:10px;
+}
+
+.tech-tags span{
+    font-size:0.9rem;
+    padding:9px 14px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:24px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card,
+.skill-box,
+.timeline-item,
+.stat,
+.hero-card{
+    width:100%;
+}
+
+.contact{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 20px;
+}
+
+.contact span{
+    margin:0;
+}
+
+a{
+    word-break:break-word;
+}
+
+/* Tablets */
+@media (max-width: 1024px){
+
+    header{
+        padding:70px 0;
+        min-height:auto;
+    }
+
+    section{
+        padding:70px 0;
+    }
+
+    .hero{
+        gap:35px;
+    }
+
+    .hero-card{
+        padding:30px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    header{
+        padding:60px 0 40px;
+    }
+
+    section{
+        padding:60px 0;
+    }
+
+    .hero{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:30px;
+    }
+
+    .hero-text,
+    .hero-card{
+        width:100%;
+        min-width:100%;
+    }
+
+    .hero-card{
+        padding:25px;
+        border-radius:18px;
+    }
+
+    .card,
+    .skill-box,
+    .timeline-item,
+    .stat{
+        padding:24px;
+    }
+
+    .btn{
+        width:100%;
+        text-align:center;
+        padding:14px 18px;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    footer{
+        text-align:left;
+    }
+}
+
+/* Small Phones */
+@media (max-width: 480px){
+
+    .container{
+        width:90%;
+    }
+
+    .hero-text h1{
+        font-size:2.2rem;
+    }
+
+    .hero-text h2{
+        font-size:1.05rem;
+    }
+
+    .section-title{
+        font-size:1.8rem;
+    }
+
+    .tech-tags span{
+        width:100%;
+        text-align:center;
+    }
+
+    .timeline-item,
+    .skill-box,
+    .card,
+    .stat{
+        padding:20px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container hero">
+
+        <div class="hero-text">
+            <h1>Krishna Venkatachala</h1>
+
+            <h2>Enterprise Solutions Architect & Technical Leader</h2>
+
+            <p>
+                Experienced technology professional with 15 years of expertise in designing scalable enterprise applications,
+                modern web platforms, and cloud-native solutions. Specialized in .NET ecosystems, Azure cloud technologies,
+                full-stack development, and technical leadership for business-critical digital platforms.
+            </p>
+
+            <div class="contact">
+                <span>📍 Bangalore, India</span>
+                <span>📧 krishna.venkatachala@outlook.com</span>
+                <span>📞 +91 9986724396</span>
+            </div>
+
+            <a href="#expertise" class="btn">View Expertise</a>
+        </div>
+
+        <div class="hero-card">
+            <h3>Technology Stack</h3>
+
+            <div class="tech-tags">
+                <span>C#</span>
+                <span>.NET Core</span>
+                <span>ASP.NET MVC</span>
+                <span>Web API</span>
+                <span>Angular</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Blazor</span>
+                <span>Azure</span>
+                <span>Azure Cosmos DB</span>
+                <span>SQL Server</span>
+                <span>Entity Framework</span>
+                <span>Git</span>
+                <span>Azure Blob Storage</span>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<section>
+    <div class="container">
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="card">
+            <p>
+                I help businesses build reliable, scalable, and maintainable software solutions using modern Microsoft technologies and cloud platforms.
+                My experience includes enterprise architecture, application modernization, cloud integrations, performance optimization,
+                and leading engineering teams through complete product lifecycles.
+            </p>
+
+            <br>
+
+            <p>
+                I am passionate about creating high-quality digital solutions that combine clean architecture, user-focused design,
+                and long-term scalability.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="expertise">
+    <div class="container">
+
+        <h2 class="section-title">Core Expertise</h2>
+
+        <div class="grid">
+
+            <div class="skill-box">
+                <h3>Backend Engineering</h3>
+                <p>
+                    C#, ASP.NET Core, MVC, REST APIs, Entity Framework, LINQ, Microservices, Scalable Enterprise Systems
+                </p>
+            </div>
+
+            <div class="skill-box">
+                <h3>Frontend Development</h3>
+                <p>
+                    Angular, HTML5, CSS3, JavaScript, Blazor, Responsive UI Development
+                </p>
+            </div>
+
+            <div class="skill-box">
+                <h3>Cloud & DevOps</h3>
+                <p>
+                    Microsoft Azure, Cosmos DB, Blob Storage, IIS, CI/CD, Git, TFS
+                </p>
+            </div>
+
+            <div class="skill-box">
+                <h3>Architecture & Leadership</h3>
+                <p>
+                    Solution Architecture, Technical Leadership, Agile Delivery, UML Design, Mentoring
+                </p>
+            </div>
+
+            <div class="skill-box">
+                <h3>AI-Assisted Engineering & Productivity</h3>
+                <p>
+                    Cursor AI, AI-assisted development workflows, engineering productivity optimization,
+                    AI-driven development practices, developer enablement, and accelerated software delivery.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="container">
+
+        <h2 class="section-title">Professional Journey</h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <h3>Technical Leadership & Architecture</h3>
+                <span>Recent Years</span>
+
+                <p>
+                    Leading enterprise software initiatives involving scalable application architecture,
+                    cloud modernization, engineering leadership, and delivery of business-critical platforms.
+                </p>
+
+                <p style="margin-top:15px;">
+                    Over the last 2 years, actively drove adoption of AI-assisted development workflows using tools such as
+                    Cursor AI and other modern AI productivity platforms to accelerate engineering delivery,
+                    improve code quality, streamline debugging, and enhance developer productivity across teams.
+                </p>
+
+                <p style="margin-top:15px;">
+                    Guided engineering teams in integrating AI into day-to-day product development workflows including
+                    code generation, refactoring, technical documentation, architecture ideation, and faster issue resolution —
+                    helping improve delivery efficiency, collaboration, and overall engineering productivity.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Enterprise Software Engineering</h3>
+                <span>Growth & Specialization</span>
+
+                <p>
+                    Built and optimized enterprise-grade applications with focus on performance, maintainability,
+                    cloud integration, and user-centric digital experiences.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Full Stack Development</h3>
+                <span>Foundation Years</span>
+
+                <p>
+                    Developed strong expertise across backend systems, frontend technologies,
+                    database optimization, and enterprise application ecosystems.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="container">
+
+        </div>
+</section>
+
+<section>
+    <div class="container">
+
+        <h2 class="section-title">Recent Projects</h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <h3>Orionmetis</h3>
+                <span>Independent Technology Initiative</span>
+
+                <p>
+                    Built and developed modern digital solutions and enterprise-focused technology initiatives through
+                    Orionmetis, focused on scalable architecture, modern web technologies, and cloud-native platforms.
+                </p>
+
+                <p style="margin-top:15px;">
+                    🌐 <a href="https://orionmetis.co.in/" target="_blank" 
+                    style="color:#38bdf8;text-decoration:none;">
+                    https://orionmetis.co.in/
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="container">
+
+        <h2 class="section-title">Professional Projects</h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <h3>Enterprise Laboratory Management Platform</h3>
+                <span>Healthcare & Analytics Domain</span>
+
+                <p>
+                    Architected and delivered scalable enterprise modules for a laboratory and trial management ecosystem,
+                    enabling workflow automation, operational efficiency, and secure high-volume data processing.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Automotive Engineering Analytics System</h3>
+                <span>Automotive Technology Domain</span>
+
+                <p>
+                    Designed and implemented reporting and analytics solutions supporting comparative engineering analysis,
+                    performance tracking, and enterprise data visualization using modern web technologies.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Cloud Modernization & Enterprise Transformation</h3>
+                <span>Digital Transformation Initiatives</span>
+
+                <p>
+                    Led modernization initiatives for enterprise applications involving ASP.NET Core, scalable APIs,
+                    Azure cloud integrations, performance optimization, and architecture modernization.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="container">
+
+        <h2 class="section-title">Highlights</h2>
+
+        <div class="stats">
+
+            <div class="stat">
+                <h2>15</h2>
+                <p>Years of Experience</p>
+            </div>
+
+            <div class="stat">
+                <h2>Enterprise</h2>
+                <p>Application Architecture Expertise</p>
+            </div>
+
+            <div class="stat">
+                <h2>Cloud</h2>
+                <p>Azure & Modern Web Technologies</p>
+            </div>
+
+            <div class="stat">
+                <h2>Leadership</h2>
+                <p>Engineering Mentoring & Delivery</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+
+        <h2 style="margin-bottom:12px;">Let's Build Modern Digital Solutions</h2>
+
+        <p>
+            Available for consulting, enterprise software development,
+            cloud architecture, and technical leadership opportunities.
+        </p>
+
+        <br>
+
+        <p class="highlight">
+            Krishna Venkatachala • Enterprise Solutions Architect
+        </p>
+
+        <br>
+
+        <div style="margin-top:25px; line-height:2;">
+            <p>📍 Bangalore, India</p>
+            <p>📧 krishna.venkatachala@outlook.com</p>
+            <p>📞 +91 9986724396</p>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
